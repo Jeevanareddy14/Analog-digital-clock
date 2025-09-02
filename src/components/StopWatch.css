@@ -1,0 +1,88 @@
+/* Make full screen layout centered */
+body {
+  background-color: lightSkyBlue;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Clock design */
+.clock {
+  width: 200px;
+  height: 200px;
+  border: 8px solid #333;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto 20px;
+  background-color: #fffdd0; /* Cream white */
+}
+
+/* Hands */
+.hand {
+  position: absolute;
+  width: 4px;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  
+}
+
+.hand.hour {
+  height: 45px;
+  background-color: black;
+}
+
+.hand.minute {
+  height: 65px;
+  background-color: #6fa8dc; /* Light Blue */
+}
+
+.hand.second {
+  height: 75px;
+  background-color: #f4cccc; /* Light Red */
+}
+
+.center-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+}
+
+.number {
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
+
+/* Button styles */
+.buttons button {
+  font-size: 16px;
+  margin: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #555;
+}
